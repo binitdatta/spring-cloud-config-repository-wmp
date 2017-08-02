@@ -1,0 +1,46 @@
+---
+spring:
+  cloud:
+    bus:
+      enabled: true
+    stream:
+      bindings:
+        springCloudBusInput:
+          destination: springCloudBus
+---
+spring:
+  profiles: rabbit
+  rabbitmq:
+    host: 35.167.226.113
+    port: 5672
+    username: config-server
+    password: retail-poc
+    
+---
+spring:
+ profiles: sleuth  
+ zipkin:
+   baseUrl: http://retailpoczipkinserv-dev.us-west-2.elasticbeanstalk.com:9411
+ sleuth:
+   sampler:
+     percentage: 1.0
+---      
+spring:
+  profiles: cassandra 
+  data:
+    cassandra:
+      keyspace-name: retail_poc
+      contact-points: 52.42.227.0,52.89.23.15,52.42.180.95
+      port: 9042
+      username: wmpadmin
+      password: Pass1234
+      consistency-level: ONE
+---
+spring:
+  profiles: solr
+  data:
+    solr:
+      url-one: http://52.42.227.0:8983/solr/
+      url-two: http://52.38.207.187:8983/solr/
+      url-three: http://34.208.108.15:8983/solr/
+  

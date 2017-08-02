@@ -1,0 +1,7 @@
+---
+logging:
+  level:
+    com.wmp.profilehandler: DEBUG
+    org.springframework.cloud.sleuth: DEBUG
+aws.kinesis.stream: RetailPOCStream2
+sqs.profile.queue: Profile_Command_Queue

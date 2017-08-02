@@ -1,0 +1,3 @@
+elasticsearch.url: search-wmp-retail-elasticsearch-2-jj474bmthsrezdxadm2vkppmb4.us-west-2.es.amazonaws.com
+aws.kinesis.stream: RetailPOCStream2
+cors.allowOrigins: http://wmp-retailpoc-ui-web.s3-website-us-west-2.amazonaws.com

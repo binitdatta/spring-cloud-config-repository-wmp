@@ -1,0 +1,7 @@
+---
+logging:
+  level:
+    com.wmp.productratinghandler: DEBUG
+    org.springframework.cloud.sleuth: DEBUG
+aws.kinesis.stream: RetailPOCStream2
+sqs.product-rating.queue: Product_Rating_Command_Queue
