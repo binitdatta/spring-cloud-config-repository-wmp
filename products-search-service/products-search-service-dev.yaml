@@ -1,1 +1,30 @@
-cors.allowOrigins: http://wmp-retailpoc-ui-web.s3-website-us-west-2.amazonaws.com
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+      fetchRegistry: true
+server:
+  port: ${SERVER_PORT:8080} 
+
+spring:
+  data:
+    solr:
+      url-one: http://52.42.227.0:8983/solr/
+      url-two: http://52.38.207.187:8983/solr/
+      url-three: http://34.208.108.15:8983/solr/  
+    cassandra:
+      keyspace-name: retail_poc
+      contact-points: 52.42.227.0,52.89.23.15,52.42.180.95
+      port: 9042
+      username: wmpadmin
+      password: Pass1234
+      consistency-level: ONE
+    rabbitmq:
+      host: 10.0.75.1
+      port: 5672
+      username: config-server
+      password: retail-poc      
+
+cors:
+  allowOrigins: http://wmp-retailpoc-ui-web.s3-website-us-west-2.amazonaws.com      
