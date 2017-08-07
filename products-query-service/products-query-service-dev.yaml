@@ -31,4 +31,4 @@ cors:
 
 aws:
   kinesis:
-	stream: RetailPOCStream2
+     stream: RetailPOCStream2
